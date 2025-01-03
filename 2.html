@@ -17,13 +17,19 @@
             height: 100%;
         }
 
-        .row>div {
-            /* flex: 1; */
-            flex-grow: 1;
+        .row > div {
+            flex: 1;
         }
 
         .vertical-collage img {
             height: 50%;
+            /* height: calc( (100% - 5px)/2 ); */
+        }
+
+        .square-collage{
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           gap: 5px;
         }
     </style>
 </head>
@@ -37,19 +43,38 @@
             <div class="row">
                 <img src="images/A.jpg" alt="">
             </div>
+           
             <!-- 2nd row -->
-            <div class="row" style="border: 1px solid darkblue;">
+            <div class="row">
                 <div>
                     <img src="images/B.jpg" alt="">
                 </div>
                 <div>
                     <img src="images/C.jpg" alt="">
                 </div>
-                <div class="vertical-collage" style="border: 12px solid darkgreen;">
+                <div class="vertical-collage">
                     <img src="images/D.jpg" alt="">
                     <img src="images/E.jpg" alt="">
                 </div>
             </div>
+
+            <!-- 3rd row -->
+             <div class="row" style="border: 5px solid maroon;">
+                <div>
+                    <img src="images/F.jpg" alt="">
+                </div>
+                <div class="square-collage">
+                    <img src="images/G.jpg" alt="">
+                    <img src="images/G.jpg" alt="">
+                    <img src="images/G.jpg" alt="">
+                    <img src="images/G.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/H.jpg" alt="">
+                </div>
+
+             </div>
+
 
         </section>
     </main>
@@ -57,3 +82,4 @@
 
 </body>
 </html>
+
